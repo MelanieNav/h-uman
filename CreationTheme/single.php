@@ -12,6 +12,7 @@
 					</div> 
 				</div> 
 			<?php endwhile; ?> 
+			<?php previous_post_link() ?> <?php next_post_link() ?>
 		<?php endif; ?>
 	</div>
 	<?php get_sidebar(); ?>

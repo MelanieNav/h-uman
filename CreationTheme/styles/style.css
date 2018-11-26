@@ -1,0 +1,153 @@
+/*
+Theme Name: CreationTheme
+Author: Naveau
+Description: Site humanitaire
+Version: 1.0
+*/
+
+body { 
+	font-family: 'Muli', sans-serif;
+	font-size: 0.8em; 
+	text-align: left; 
+	background: #f5f5f5; 
+	color: black; 
+	width: 80%;
+ 	max-width: 1024px;
+    min-width: 700px;
+    margin: 0 auto;
+}
+
+#header { 
+	font-family: 'Muli', sans-serif; 
+	background: #1DBF69;
+	padding: 0 10px 20px 10px; 
+	width: 100%;
+}
+
+#content { 
+	float: left; 
+	margin-bottom: 20px; 
+	width: 80%;
+}   
+
+#content h2 { 
+	font-size: 1.3em; 
+}
+
+.sidebar { 
+	float: right; 
+	width: 17%;
+	border: thin #3aaefc solid;
+	margin-top:10px;
+	padding-bottom: 20px;
+}
+
+.sidebar ul{ 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0 10px; 
+}
+
+#footer { 
+	font-size: 1em; 
+	background: #1DBF69;
+	padding: 10px 10px 0 0; 
+	clear: both; 
+	width: 100%; 
+}
+
+#footer p{  
+	font-size: 1em; 
+	padding: 0 10px 20px 0; 
+}
+
+h1 {
+	margin :0;
+}
+
+.comments-template{ 
+	margin: 10px 0 0 0; 
+}   
+
+.comments-template ol{ 
+	margin: 10px; 
+	padding: 0 0 0 15px; 
+	list-style: none; 
+}   
+
+.comments-template ol p{ 
+	font-family: 'Muli', sans-serif; 
+	font-size: 0.9em; 
+}   
+.comments-template ol li{ 
+	margin: 10px 0 0 0; 
+	line-height: 15px; 
+	padding: 0 0 10px; 
+}   
+
+.comments-template h2, .comments-template h3{ 
+	font-size: 1.2em; 
+}   
+
+.commentmetadata{ 
+	font-size: 0.9em; 
+}  
+
+.comments-template p.nocomments{ 
+	padding: 0; 
+}   
+
+.comments-template textarea{ 
+	font-family: 'Muli', sans-serif; 
+	font-size: 0.9em; 
+}   
+
+.cadre_commentaires { 
+	border-bottom: 1px solid #ccc; 
+	border-top: 1px solid #ccc; 
+}
+
+a { 
+	color:black;
+	text-decoration: none; 
+}
+
+a:hover { 
+	text-decoration: underline; 
+}
+
+#header>ul{
+	list-style-type: none;	
+	text-align: center;
+	margin-top:0;
+	margin-bottom: 0;
+}
+
+#header>ul>li{
+	display: inline;
+}
+
+
+#header a{
+	color:white;
+	text-decoration: none;
+}
+
+#header a:hover{
+	text-decoration: underline;
+}
+
+.sep_droite{
+	border-right: 2px solid #3aaefc;
+}
+
+#header a{
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+li:nth-of-type(6){
+	padding-left: 25px;
+}
+
+
