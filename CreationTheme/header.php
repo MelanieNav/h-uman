@@ -20,7 +20,7 @@
 </head>
 <body>
 	<div id="header">
-		<h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+		<a href="../home.php"><img width="150px" src="<?php bloginfo('template_url');?>/images/logo.png" alt="logo"></a>
 		<ul class="nav">
 			<li><a class="sep_droite" href="">PROPOSER UNE MISSION</a></li>
 			<li><a class="sep_droite" href="">TÉMOIGNAGES</a></li>
