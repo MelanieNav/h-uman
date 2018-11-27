@@ -5,24 +5,84 @@ Description: Site humanitaire
 Version: 1.0
 */
 
+/******GENERAL********/
 body { 
 	font-family: 'Muli', sans-serif;
 	text-align: left; 
 	background: #f5f5f5; 
 	color: black; 
-	width: 80%;
- 	max-width: 1920px;
-    min-width: 700px;
-    margin: 0 auto;
 }
 
+h1 {
+	margin :0;
+}
+
+/******HEADER********/
 #header { 
 	font-family: 'Muli', sans-serif; 
-	background: #1DBF69;
 	padding: 0 10px 20px 10px; 
 	width: 100%;
 }
 
+#triangle {
+	height: 0;
+	width: 0;
+	border-top: 800px solid #1DBF69;
+	border-left: 300px solid transparent;
+	opacity: 0.7;
+	position: absolute;
+	right: 20.3%;
+	z-index: -5;
+}
+
+a:hover { 
+	text-decoration: underline; 
+}
+
+#header>ul{
+	list-style-type: none;	
+	text-align: center;
+	margin-top:0;
+	margin-bottom: 0;
+	padding:0;
+}
+
+#header>ul>li{
+	display: inline;
+}
+
+#header a{
+	text-decoration: none;
+	color: black;
+}
+
+#header a:hover{
+	text-decoration: underline;
+}
+
+.sep_droite{
+	border-right: 2px solid #3aaefc;
+}
+
+#header a{
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+#header img{
+	margin-top: 0px;
+	display: inline-block;
+}
+
+.navbar>li:nth-of-type(6){
+	padding-left: 25px;
+}
+
+.navbar{	
+    display: inline-block;
+}
+
+/******CONTENT********/
 #content { 
 	float: left; 
 	margin-bottom: 20px; 
@@ -33,6 +93,7 @@ body {
 	font-size: 1.3em; 
 }
 
+/******SIDEBAR********/
 .sidebar { 
 	float: right; 
 	width: 17%;
@@ -47,23 +108,44 @@ body {
 	padding: 0 10px; 
 }
 
+/******FOOTER********/
 #footer { 
 	font-size: 1em; 
 	background: #1DBF69;
-	padding: 10px 10px 0 0; 
+	padding: 20px 10px 0 0; 
 	clear: both; 
 	width: 100%; 
+	opacity: 0.7;
+	text-align: center;
 }
 
 #footer p{  
 	font-size: 1em; 
-	padding: 0 10px 20px 0; 
+	padding: 0 10px 0px 0; 
+	display: inline-block;
 }
 
-h1 {
-	margin :0;
+#footer>ul{
+	list-style-type: none;	
+	text-align: center;
+	display: inline-block;
 }
 
+#footer>ul>li{
+	display: inline;
+}
+
+#footer a{
+	color:white;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+#footer a:hover{
+	text-decoration: underline;
+}
+
+/******COMMENTAIRES********/
 .comments-template{ 
 	margin: 10px 0 0 0; 
 }   
@@ -106,67 +188,4 @@ h1 {
 	border-top: 1px solid #ccc; 
 }
 
-a:hover { 
-	text-decoration: underline; 
-}
-
-#header>ul{
-	list-style-type: none;	
-	text-align: center;
-	margin-top:0;
-	margin-bottom: 0;
-}
-
-#header>ul>li{
-	display: inline;
-}
-
-
-#header a{
-	color:white;
-	text-decoration: none;
-}
-
-#header a:hover{
-	text-decoration: underline;
-}
-
-.sep_droite{
-	border-right: 2px solid #3aaefc;
-}
-
-#header a{
-	padding-right: 10px;
-	padding-left: 10px;
-}
-
-#header img{
-	margin-top: 40px;
-}
-
-li:nth-of-type(6){
-	padding-left: 25px;
-}
-
-#footer>ul{
-	list-style-type: none;	
-	text-align: center;
-}
-
-#footer>ul>li{
-	display: inline;
-}
-
-#footer a{
-	color:white;
-	text-decoration: none;
-	margin-right: 20px;
-}
-
-#footer a:hover{
-	text-decoration: underline;
-}
-
-.bckgrd{
-	background: url("/images/bckgrd.jpg") no-repeat fixed center;
-}
+/******HOME********/

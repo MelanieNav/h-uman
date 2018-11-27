@@ -19,15 +19,17 @@
 	<?php wp_head(); ?>
 </head>
 <body>
-	<div id="header">
-		<a href="../home.php"><img width="150px" src="<?php bloginfo('template_url');?>/images/logo.png" alt="logo"></a>
-		<ul class="nav">
-			<li><a class="sep_droite" href="">PROPOSER UNE MISSION</a></li>
-			<li><a class="sep_droite" href="">TÉMOIGNAGES</a></li>
-			<li><a class="sep_droite" href="">RECHERCHER</a></li>
-			<li><a class="sep_droite" href="">CONSEILS PRATIQUES</a></li>
-			<li><a href="">AGIR</a></li>
-			<li><a class="sep_droite" href="">S'inscrire</a></li>
-			<li><a href="">Se connecter</a></li>
-		</ul>
-	</div>
+	<div class="container">		
+		<div id="header">	
+			<div id="triangle"></div>			
+			<a href="<?php bloginfo('url');?>/home.php"><img width="150px" src="<?php bloginfo('template_url');?>/images/logo.png" alt="logo"></a>			
+			<ul class="navbar">
+				<li><a class="sep_droite" href="">PROPOSER UNE MISSION</a></li>
+				<li><a class="sep_droite" href="">TÉMOIGNAGES</a></li>
+				<li><a class="sep_droite" href="">RECHERCHER</a></li>
+				<li><a class="sep_droite" href="">CONSEILS PRATIQUES</a></li>
+				<li><a href="">AGIR</a></li>
+				<li><a class="sep_droite" href="">S'inscrire</a></li>
+				<li><a href="">Se connecter</a></li>
+			</ul>			
+		</div>
