@@ -20,9 +20,15 @@
 </head>
 <body>
 	<div class="container">		
-		<div id="header">	
-			<div id="triangle"></div>			
-			<a href="<?php bloginfo('url');?>/home.php"><img width="150px" src="<?php bloginfo('template_url');?>/images/logo.png" alt="logo"></a>			
+		<div id="header">
+		<?php if(is_front_page()){?>
+			<div class="bckgrd"></div>
+		<?php } else {?>
+			<div id="triangle"></div>
+		<?php
+		}
+		?>							
+			<a href="<?php bloginfo('url');?>/index.php"><img width="150px" src="<?php bloginfo('template_url');?>/images/logo.png" alt="logo"></a>			
 			<ul class="navbar">
 				<li><a class="sep_droite" href="">PROPOSER UNE MISSION</a></li>
 				<li><a class="sep_droite" href="">TÉMOIGNAGES</a></li>

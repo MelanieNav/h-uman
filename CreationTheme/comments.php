@@ -81,9 +81,6 @@ $oddcomment = 'alt';
 <p><input type="text" name="email" id="email" value="<?php echo $comment_author_email; ?>" size="40" tabindex="2" />
 <label for="email"><small>email (ne sera pas publi&eacute;) <?php if ($req) echo "(requis)"; ?></small></label></p>
 
-<p><input type="text" name="url" id="url" value="<?php echo $comment_author_url; ?>" size="40" tabindex="3" />
-<label for="url"><small>Site Web</small></label></p>
-
 <?php endif; ?>
 
 <!--<p><small><strong>XHTML:</strong> <?php _e('Vous pouvez utiliser ces tags&#58;'); ?> <?php echo allowed_tags(); ?></small></p>-->
