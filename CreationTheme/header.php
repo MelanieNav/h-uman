@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('template_url');  ?>/images/H.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title><?php bloginfo('name');?></title>
+	<title><?php bloginfo('name'); ?></title>
 	<!--STYLE PERSO-->
 	<link rel="stylesheet" href="<?php bloginfo('template_url');?>/styles/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
@@ -22,7 +22,7 @@
 	<div class="container">		
 		<div id="header">
 		<?php if(is_front_page()){?>
-			<div class="bckgrd"></div>
+			<div class="container bckgrd"></div>
 		<?php } else {?>
 			<div id="triangle"></div>
 		<?php

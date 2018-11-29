@@ -1,4 +1,15 @@
 	<?php get_header(); ?>
+	<div id="boutonAccueil">
+		<div class="btn btn-default">
+			Type de mission
+		</div>
+		<div class="btn btn-default">
+			Destination
+		</div>
+		<div class="btn btn-default">
+			Rechercher
+		</div>
+	</div>
 	<div id="content"> 
 		<?php if(have_posts()) : ?>
 			<?php while(have_posts()) : the_post(); ?> 
@@ -20,5 +31,4 @@
 	<?php get_sidebar(); ?>
 	<?php get_footer(); ?>
 		</div>
-	</body> 
-</html>
+	
