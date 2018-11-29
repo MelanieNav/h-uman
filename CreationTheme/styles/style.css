@@ -207,9 +207,16 @@ a:hover {
 }
 
 #boutonAccueil{
-	height: 800px;
+	height: 250px;
 }
 
-#boutonAccueil>.btn{
-	margin-right: 100px;
+.dropdown{
+	display: flex;
+	justify-content: center; 
+	margin-top: 500px;
+}
+
+.dropdown>button{
+	margin-left: 5%;
+	opacity: 0.85;
 }

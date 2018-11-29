@@ -1,14 +1,28 @@
-	<?php get_header(); ?>
-	<div id="boutonAccueil">
-		<div class="btn btn-default">
+	<?php get_header(); ?>	
+	<div class="dropdown">
+		<button class="btn btn-default dropdown-toggle" type="button" id="typeMission" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 			Type de mission
-		</div>
-		<div class="btn btn-default">
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			<li><a href="#" title="Lien 1">Lien 1</a></li>
+			<li><a href="#" title="Lien 2">Lien 2</a></li>
+			<li><a href="#" title="Lien 3">Lien 3</a></li>
+		</ul>
+		<button class="btn btn-default dropdown-toggle" type="button" id="Destination" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 			Destination
-		</div>
-		<div class="btn btn-default">
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+			<li><a href="#" title="Lien 1">Lien 1</a></li>
+			<li><a href="#" title="Lien 2">Lien 2</a></li>
+			<li><a href="#" title="Lien 3">Lien 3</a></li>
+		</ul>
+		<button class="btn btn-default">
 			Rechercher
-		</div>
+		</button>	
+	</div>	
+	<div id="boutonAccueil">
 	</div>
 	<div id="content"> 
 		<?php if(have_posts()) : ?>
@@ -30,5 +44,4 @@
 	</div>
 	<?php get_sidebar(); ?>
 	<?php get_footer(); ?>
-		</div>
-	
+</div>
