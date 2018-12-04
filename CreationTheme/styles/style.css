@@ -7,7 +7,12 @@ Version: 1.0
 
 /******GENERAL********/
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; 
+  -moz-box-sizing: border-box;
+}
+
+html {
+  height: 100%;
 }
 
 body { 
@@ -15,6 +20,11 @@ body {
 	text-align: left; 
 	background: #f5f5f5; 
 	color: black; 
+	min-height: 100%;
+  	margin: 0;
+  	padding: 0;
+  	position: relative;
+  	padding-bottom: 60px;
 }
 
 h1 {
@@ -73,12 +83,6 @@ a:hover {
 	padding-left: 10px;
 }
 
-#header>img{
-	position: absolute;
-	z-index: -20;
-	opacity: 0.85;
-}
-
 .navbar>li:nth-of-type(6){
 	padding-left: 25px;
 }
@@ -86,6 +90,7 @@ a:hover {
 .navbar{	
     display: inline-block;
 }
+
 
 /******CONTENT********/
 #content { 
@@ -124,6 +129,9 @@ a:hover {
 	opacity: 0.7;
 	text-align: center;
 	z-index: 5;
+	position: absolute;
+    height: 50px;
+    bottom: 0; left: 0; right: 0;
 }
 
 #footer p{  
@@ -150,6 +158,10 @@ a:hover {
 
 #footer a:hover{
 	text-decoration: underline;
+}
+
+.clear{
+	clear: both;
 }
 
 /******COMMENTAIRES********/
@@ -220,3 +232,11 @@ a:hover {
 	margin-left: 5%;
 	opacity: 0.85;
 }
+
+/*******POSTER UNE MISSION**************/
+.h-proposermission{
+	background-color: #F4F4F4;
+	padding:10px 15px;
+	width: 76%;
+	margin-left: 20px;
+}	

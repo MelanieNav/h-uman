@@ -1,4 +1,12 @@
 <?php 
+/**Redirige sur la page d'accueil lors du login ou du logout***/
+add_filter( "wp_login","redirigeHome" );
+add_filter( "wp_logout","redirigeHome" );
+
+function redirigeHome(){
+    wp_redirect(home_url());
+    exit;
+}
 
 //enlève barre d'admin
 if ( function_exists('register_sidebar') ) register_sidebar();

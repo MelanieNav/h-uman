@@ -19,23 +19,42 @@
 	<?php wp_head(); ?>
 </head>
 <body>
-	<div class="container">		
-		<div id="header">
 		<?php if(is_front_page()){?>
-			<div class="container bckgrd"></div>
+			<div class="bckgrd"></div>	
+			<div class="container">
+			<div id="header">
 		<?php } else {?>
+			<div class="container">		
+			<div id="header">
 			<div id="triangle"></div>
 		<?php
 		}
 		?>							
 			<a href="<?php bloginfo('url');?>/index.php"><img width="150px" src="<?php bloginfo('template_url');?>/images/logo.png" alt="logo"></a>			
 			<ul class="navbar">
-				<li><a class="sep_droite" href="">PROPOSER UNE MISSION</a></li>
+				<li><a class="sep_droite" href="<?php bloginfo('url'); ?>/proposermission"">PROPOSER UNE MISSION</a></li>
 				<li><a class="sep_droite" href="">TÉMOIGNAGES</a></li>
 				<li><a class="sep_droite" href="">RECHERCHER</a></li>
 				<li><a class="sep_droite" href="">CONSEILS PRATIQUES</a></li>
 				<li><a href="">AGIR</a></li>
-				<li><a class="sep_droite" href="">S'inscrire</a></li>
-				<li><a href="">Se connecter</a></li>
+				<?php if(!is_user_logged_in()){ ?>
+					<li><a class="sep_droite" href="<?php bloginfo('url'); ?>/wp-login.php?action=register">S'inscrire</a></li>
+				<?php } ?>
+				<?php if(is_user_logged_in()){ ?>
+					<?php if($current_user->user_level!=10){ ?>
+						<li>
+							<a target="_BLANK" href="<?php bloginfo('url'); ?>/wp-admin">
+								<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+								<?php echo $current_user->user_login ?>	
+							</a>
+						</li>
+					<?php }else{ ?>
+						<li><a target="_BLANK" href="<?php bloginfo('url'); ?>/wp-admin">BackOffice</a></li>
+					<?php } ?>
+				<?php } ?>
+				<li><?php wp_loginout(); ?></li>
 			</ul>			
 		</div>
+		
+							
+							
