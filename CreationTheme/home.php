@@ -37,9 +37,6 @@
 					</div> 
 				</div> 
 			<?php endwhile; ?> 
-			<div class="navigation">
-				<?php posts_nav_link(' - ','page suivante','page pr&eacute;c&eacute;dente'); ?> 
-			</div>
 		<?php endif; ?>
 	</div>
 	<?php get_sidebar(); ?>

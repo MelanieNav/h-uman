@@ -33,7 +33,7 @@
 			<a href="<?php bloginfo('url');?>/index.php"><img width="150px" src="<?php bloginfo('template_url');?>/images/logo.png" alt="logo"></a>			
 			<ul class="navbar">
 				<li><a class="sep_droite" href="<?php bloginfo('url'); ?>/proposermission"">PROPOSER UNE MISSION</a></li>
-				<li><a class="sep_droite" href="">TÉMOIGNAGES</a></li>
+				<li><a class="sep_droite" href="<?php bloginfo('url'); ?>/temoignages">TÉMOIGNAGES</a></li>
 				<li><a class="sep_droite" href="">RECHERCHER</a></li>
 				<li><a class="sep_droite" href="">CONSEILS PRATIQUES</a></li>
 				<li><a href="">AGIR</a></li>

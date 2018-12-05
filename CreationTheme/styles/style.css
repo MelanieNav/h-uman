@@ -31,6 +31,10 @@ h1 {
 	margin :0;
 }
 
+h3{
+	text-align: center;
+}
+
 /******HEADER********/
 #header { 
 	font-family: 'Muli', sans-serif; 
@@ -240,3 +244,10 @@ a:hover {
 	width: 76%;
 	margin-left: 20px;
 }	
+
+/*******TEMOIGNAGES**************/
+.tem{
+	border-radius: 10px;
+	border: thin solid black;
+	height: 200px;
+}
