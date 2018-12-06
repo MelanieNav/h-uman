@@ -6,27 +6,26 @@ the_post();
 	<h3><?php the_title(); ?></h3>
 	<br>
 	<div class="row">
-		<div class="tem col-md-3 col-md-offset-1">
-			
-		</div>
-		<div class="tem col-md-3 col-md-offset-1">
-			
-		</div>
-		<div class="tem col-md-3 col-md-offset-1">
-			
-		</div>
+		<?php 
+		$i=0;
+		while (have_posts()) {
+			the_post();
+		?>
+			<div class="tem col-md-3 col-md-offset-1">
+				<div class="h-titre">
+					<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				</div>			
+				<div class="h-resume">
+					<?php echo get_the_excerpt_max_charlength(100,get_the_excerpt()) ?>
+				</div>	
+			</div>
+			<?php 
+				$i=$i+1;
+				$reste=fmod($i,3);
+				if($reste==0){
+					echo'</div><div class="row" >';
+				}
+			} 
+			?>				
 	</div>
-	<br><br><br>
-	<div class="row">
-		<div class="tem col-md-3 col-md-offset-1">
-			
-		</div>
-		<div class="tem col-md-3 col-md-offset-1">
-			
-		</div>
-		<div class="tem col-md-3 col-md-offset-1">
-			
-		</div>
-	</div>	
-</div>
 <?php get_footer(); ?>

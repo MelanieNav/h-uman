@@ -41,4 +41,47 @@ function add_Main_Nav() {
 }
 // Hook to the init action hook, run our navigation menu function
 add_action( 'init', 'add_Main_Nav' );
+
+function traitement_formulaire_proposer_mission() {
+
+    if (isset($_POST['envoiMission']) && isset($_POST['proposer-verif']))  {
+
+        if (wp_verify_nonce($_POST['envoiMission'], 'proposermission')) {
+            wp_redirect();
+            exit;
+        }
+
+    }
+}
+add_action('template_redirect', 'traitement_formulaire_proposer_mission');
+
+//liste déroulante page d'accueil
+function liste_type($tab,$nblignes){
+    for($i=0;$i<$nblignes;$i++){
+        echo '<option value="'.$tab[$i]["type_mission"].'"></option>';
+    }
+}
+
+/////RENVOIE UN NOMBRE LIMITE ($charlength) DE CARACTERES D'UN RESUME ($excerpt)////
+//ex : echo the_excerpt_max_charlength(200,get_the_excverpt()) -> renvoie les 200
+//premiers caractères du résumé du post en cours (dans la boucle)
+
+function get_the_excerpt_max_charlength($charlength,$excerpt) {
+    //$excerpt = get_the_excerpt();
+    $charlength++;
+
+    if ( mb_strlen( $excerpt ) > $charlength ) {
+        $subex = mb_substr( $excerpt, 0, $charlength - 5 );
+        $exwords = explode( ' ', $subex );
+        $excut = - ( mb_strlen( $exwords[ count( $exwords ) - 1 ] ) );
+        if ( $excut < 0 ) {
+            return mb_substr( $subex, 0, $excut ).'[...]';
+        } else {
+            return $subex.'[...]';
+        }
+        return '[...]';
+    } else {
+        return $excerpt;
+    }
+}
 ?>

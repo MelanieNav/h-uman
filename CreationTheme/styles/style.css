@@ -232,11 +232,19 @@ a:hover {
 	margin-top: 500px;
 }
 
-.dropdown>button{
-	margin-left: 5%;
+#listeTypeMission{
+	margin-right: 5%;
 	opacity: 0.85;
 }
 
+#listeDestination{
+	margin-right: 5%;
+	opacity: 0.85;
+}
+
+#rechercher{
+	opacity: 0.85;
+}
 /*******POSTER UNE MISSION**************/
 .h-proposermission{
 	background-color: #F4F4F4;
