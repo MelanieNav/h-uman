@@ -30,11 +30,29 @@
 		<?php
 		}
 		?>							
-			<a href="<?php bloginfo('url');?>/index.php"><img width="200px" src="<?php bloginfo('template_url');?>/images/logo.png" alt="logo"></a>			
+			<a href="<?php bloginfo('url');?>/index.php"><img width="150px" src="<?php bloginfo('template_url');?>/images/logo.png" alt="logo"></a>			
 			<ul class="navbar">
-				<li><a class="sep_droite" href="<?php bloginfo('url'); ?>/proposermission"">PROPOSER UNE MISSION</a></li>
-				<li><a class="sep_droite" href="">TÉMOIGNAGES</a></li>
-				<li><a class="sep_droite" href="">RECHERCHER</a></li>
+				<li><a class="sep_droite" href="<?php bloginfo('url'); ?>/proposermission">PROPOSER UNE MISSION</a></li>
+				<li><a class="sep_droite" href="<?php bloginfo('url'); ?>/temoignages">TÉMOIGNAGES</a></li>
+				<li>
+					<a class="sep_droite" href="">RECHERCHER</a>
+					<ul>
+						<li>Par type de mission:
+							<select class="btn btn-default dropdown-toggle btn-lg" id="listeTypeMission" name="typeMission">
+								<option disabled="disabled" selected="selected">
+									Type de mission
+								</option>
+								<?php 
+								liste_type($tab, $nbLignes);
+								?>
+							</select>
+						</li>
+						<hr>
+						<li>Par localisation:
+							<img width="70%" src="<?php bloginfo('template_url');?>/images/carte-monde.png" alt="carte">
+						</li>
+					</ul>
+				</li>
 				<li><a class="sep_droite" href="">CONSEILS PRATIQUES</a></li>
 				<li><a href="">AGIR</a></li>
 				<?php if(!is_user_logged_in()){ ?>
@@ -55,6 +73,11 @@
 				<li><?php wp_loginout(); ?></li>
 			</ul>			
 		</div>
-		
-							
-							
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".navbar li a").on('click', function(event) {
+			$(this).toggleClass(" active");
+		});
+	});
+</script>
