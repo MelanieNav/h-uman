@@ -7,7 +7,6 @@ the_post();
 	<div class="row">
 		<div class="col-md-9">
 			<form class="exercice" action="" method="post" enctype="multipart/form-data">
-				<?php wp_nonce_field('proposermission', 'proposer-verif'); ?>
 				<table class="table table-hover">
 					<tr>
 						<td>Pays:</td>
@@ -33,7 +32,7 @@ the_post();
 				</div><br>
 				<input type="file" name="file" />
 				<br><br>
-				<button class="btn btn-primary" id="submit" type="submit" name="envoiMission" value="soumettre">Soumettre</button>				
+				<button class="btn btn-primary" type="submit" name="action" value="majeur">Soumettre</button>				
 			</form>
 		</div>
 	</div>

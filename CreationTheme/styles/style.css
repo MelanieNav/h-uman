@@ -31,10 +31,6 @@ h1 {
 	margin :0;
 }
 
-h3{
-	text-align: center;
-}
-
 /******HEADER********/
 #header { 
 	font-family: 'Muli', sans-serif; 
@@ -82,6 +78,10 @@ a:hover {
 	border-right: 2px solid #3aaefc;
 }
 
+#header>li{
+	color : white;
+}
+
 #header a{
 	padding-right: 10px;
 	padding-left: 10px;
@@ -93,34 +93,6 @@ a:hover {
 
 .navbar{	
     display: inline-block;
-}
-
-.active a{
-   color:#1DBF69;
-}
-
-/***********SOUS-MENU*******/
-.navbar ul li {
-/* on enlève ce comportement pour les liens du sous menu */
-    display: inherit;
-}
-
-.navbar ul {
-    position: absolute;
-/* on cache les sous menus complètement sur la gauche */
-    left: -999em;
-    text-align: left;
-    z-index: 1000;
-}
-
-.navbar li:hover ul {
-/* Au survol des li du menu on replace les sous menus */
-    left: auto;
-    background-color: #1DBF69;
-    width: 100%;
-    opacity: 0.8;
-    padding: 20px 20px;
-    border-radius: 6px;
 }
 
 
@@ -257,22 +229,15 @@ a:hover {
 .dropdown{
 	display: flex;
 	justify-content: center; 
-	margin-top: 500px;
+	margin-top: 200px;
+	margin-bottom: 280px;
 }
 
-#listeTypeMission{
-	margin-right: 5%;
+.dropdown>button{
+	margin-left: 5%;
 	opacity: 0.85;
 }
 
-#listeDestination{
-	margin-right: 5%;
-	opacity: 0.85;
-}
-
-#rechercher{
-	opacity: 0.85;
-}
 /*******POSTER UNE MISSION**************/
 .h-proposermission{
 	background-color: #F4F4F4;
@@ -281,9 +246,276 @@ a:hover {
 	margin-left: 20px;
 }	
 
-/*******TEMOIGNAGES**************/
-.tem{
-	border-radius: 10px;
-	border: thin solid black;
-	height: 200px;
+
+/*******Petits écrans***********/
+@media screen and (min-width: 200px) and (max-width: 750px) {
+
+body{
+	padding-bottom: 300px;
+}
+
+li{
+	width: 100%;
+}
+
+.container{
+	text-align: center;
+}
+
+.navbar{
+	display: block;
+}
+
+li>a{
+	display: block;
+	margin-top: 15px;
+}
+
+#boutonAccueil{
+	height: 10px;
+}
+
+a>img {
+	width: 150px;
+	text-align: center;
+}
+
+#header>ul>li{
+	display: block;
+	text-align: center;
+	color: white;
+}
+
+#header a{
+	text-decoration: none;
+	color: white;
+}
+
+.glyphicon{
+	text-align: center;
+}
+
+.sep_droite{
+	border-right: none;
+	width: 100%;
+}
+
+.bckgrd{
+	width: 100%;
+	height: 355px;
+}
+
+.dropdown{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.dropdown>button{
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 15px;
+	opacity: 0.85;
+}
+
+.comments-template{
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/*********FOOTER*********/
+#footer { 
+	font-size: 1em; 
+	background: #1DBF69;
+	width: 100%; 
+	opacity: 0.7;
+	text-align: center;
+    height: 280px;
+    margin-top: 15px;
+}
+
+#footer p{  
+	font-size: 1em; 
+	display: block;
+}
+
+#footer>ul{
+	list-style-type: none;	
+	text-align: center;
+	display: block;
+}
+
+#footer>ul>li{
+	display: block;
+}
+
+#footer a{
+	color:white;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+#footer a:hover{
+	text-decoration: underline;
+}
+
+.sidebar{
+	display: none;
+}
+
+h2{
+	text-align: center;
+}
+
+#content{
+	width: 100%;
+	padding : 0;
+}
+
+.post{
+	display: block;
+	text-align: left;
+}
+
+}
+
+
+
+
+/*******Moyens écrans (tablettes)***********/
+@media screen and (min-width: 751px) and (max-width: 970px) {
+
+body{
+	padding-bottom: 300px;
+}
+
+li{
+	width: 100%;
+}
+
+.container{
+	text-align: center;
+}
+
+.navbar{
+	display: block;
+}
+
+li>a{
+	display: block;
+	margin-top: 15px;
+}
+
+#boutonAccueil{
+	height: 10px;
+}
+
+a>img {
+	width: 200px;
+	text-align: center;
+}
+
+#header>ul>li{
+	display: block;
+	text-align: center;
+	color: white;
+}
+
+#header a{
+	text-decoration: none;
+	color: white;
+}
+
+.glyphicon{
+	text-align: center;
+}
+
+.sep_droite{
+	border-right: none;
+	width: 100%;
+}
+
+.bckgrd{
+	width: 100%;
+	height: 400px;
+}
+
+.dropdown{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.dropdown>button{
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 15px;
+	opacity: 0.85;
+}
+
+.comments-template{
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/*********FOOTER*********/
+#footer { 
+	font-size: 1em; 
+	background: #1DBF69;
+	width: 100%; 
+	opacity: 0.7;
+	text-align: center;
+    height: 280px;
+    margin-top: 15px;
+}
+
+#footer p{  
+	font-size: 1em; 
+	display: block;
+}
+
+#footer>ul{
+	list-style-type: none;	
+	text-align: center;
+	display: block;
+}
+
+#footer>ul>li{
+	display: block;
+}
+
+#footer a{
+	color:white;
+	text-decoration: none;
+	margin-right: 20px;
+}
+
+#footer a:hover{
+	text-decoration: underline;
+}
+
+.sidebar{
+	display: none;
+}
+
+h2{
+	text-align: center;
+}
+
+#content{
+	width: 100%;
+	padding : 0;
+}
+
+.post{
+	display: block;
+	text-align: left;
+}
+
 }

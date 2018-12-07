@@ -30,28 +30,11 @@
 		<?php
 		}
 		?>							
-			<a href="<?php bloginfo('url');?>/index.php"><img width="150px" src="<?php bloginfo('template_url');?>/images/logo.png" alt="logo"></a>			
+			<a href="<?php bloginfo('url');?>/index.php"><img width="200px" src="<?php bloginfo('template_url');?>/images/logo.png" alt="logo"></a>			
 			<ul class="navbar">
-				<li><a class="sep_droite" href="<?php bloginfo('url'); ?>/proposermission" <?php echo ($_SERVER['REQUEST_URI']=="<?php bloginfo('url'); ?>/proposermission") ? 'class="active"' : ''?>>PROPOSER UNE MISSION</a></li>
-				<li><a class="sep_droite" href="<?php bloginfo('url'); ?>/temoignages"<?php echo ($_SERVER['REQUEST_URI']=="<?php bloginfo('url'); ?>/temoignages") ? 'class="active"' : ''?>>TÉMOIGNAGES</a></li>
-				<li>
-					<a class="sep_droite" href="">RECHERCHER</a>
-					<ul>
-						<li>Par type de mission:
-							<select class="btn btn-default dropdown-toggle btn-lg" id="listeTypeMission" name="typeMission">
-								<option disabled="disabled" selected="selected">
-									Type de mission
-								</option>
-								<?php 
-								liste_type($tab, $nbLignes);
-								?>
-							</select>
-						</li>
-						<li>Par localisation:
-							Carte du monde
-						</li>
-					</ul>
-				</li>
+				<li><a class="sep_droite" href="<?php bloginfo('url'); ?>/proposermission"">PROPOSER UNE MISSION</a></li>
+				<li><a class="sep_droite" href="">TÉMOIGNAGES</a></li>
+				<li><a class="sep_droite" href="">RECHERCHER</a></li>
 				<li><a class="sep_droite" href="">CONSEILS PRATIQUES</a></li>
 				<li><a href="">AGIR</a></li>
 				<?php if(!is_user_logged_in()){ ?>
