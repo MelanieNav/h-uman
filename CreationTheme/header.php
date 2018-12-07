@@ -31,7 +31,7 @@
 		}
 		?>							
 			<a href="<?php bloginfo('url');?>/index.php"><img width="150px" src="<?php bloginfo('template_url');?>/images/logo.png" alt="logo"></a>			
-			<ul class="navbar">
+			<ul class="navbar" id="test">
 				<li><a class="sep_droite" href="<?php bloginfo('url'); ?>/proposermission">PROPOSER UNE MISSION</a></li>
 				<li><a class="sep_droite" href="<?php bloginfo('url'); ?>/temoignages">TÉMOIGNAGES</a></li>
 				<li>
@@ -76,8 +76,13 @@
 
 <script type="text/javascript">
 	$(document).ready(function(){
-		$(".navbar li a").on('click', function(event) {
-			$(this).toggleClass(" active");
-		});
+
+		//alert(window.location.href);
+		lien=window.location.href;
+		chemin=lien.substring(0,lien.length-1);
+
+		//alert(chemin);
+		$('li a[href="'+chemin+'"]').addClass("active");
+
 	});
 </script>
