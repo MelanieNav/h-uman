@@ -4,9 +4,9 @@
 		<p>Copyright &#169; <?php print(date('Y')); ?> <?php bloginfo('name'); ?></p> 
 		<ul class="footer">
 			<li><a href="<?php bloginfo('url'); ?>/politique-de-confidentialite">Mentions légales</a></li>
-			<li><a href="">Plan du site</a></li>
-			<li><a href="">Contact</a></li>
-			<li><a href="">Newsletter</a></li>
+			<li><a href="<?php bloginfo('url'); ?>/sitemap_index.xml">Plan du site</a></li>
+			<li><a href="<?php bloginfo('url'); ?>/contact">Contact</a></li>
+			<li><a href="<?php bloginfo('url'); ?>/newsletter">Newsletter</a></li>
 			<li><a href="">Faire un don</a></li>
 			<li><a href="">Qui sommes-nous?</a></li>
 		</ul>

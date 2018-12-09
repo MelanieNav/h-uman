@@ -286,3 +286,29 @@ a:hover {
 	border: thin solid black;
 	height: 200px;
 }
+
+.lienTem{
+	text-decoration: none;
+	margin-left: 13%; 
+	color:black;
+}
+
+/*******REDIGER TEMOIGNAGE**************/
+.h-redigerTem{
+	background-color: #F4F4F4;
+	padding:10px 15px;
+	width: 76%;
+	margin-left: 70px;
+}
+
+.h-redigerTem>.row{
+	margin-left: 20px;
+}
+
+/*******CONTACT**************/
+.h-contact{
+	background-color: #F4F4F4;
+	padding:10px 35px;
+	width: 70%;
+	margin-left: 150px;
+}

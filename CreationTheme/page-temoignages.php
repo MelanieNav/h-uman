@@ -6,7 +6,7 @@ the_post();
 	<h3><?php the_title(); ?></h3>
 	<br>
 	<div class="row">
-		<a href="">Écrire un témoignage</a>
+		<a class="lienTem" href="<?php bloginfo('url'); ?>/redigerTem">Écrire un témoignage...</a>
 	</div>
 	<div class="row">
 		<?php 

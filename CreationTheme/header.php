@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="<?php bloginfo('template_url');?>/js/jquery-ui-1.12.1/jquery-ui.min.css">
 	<!--BOOTSTRAP-->
 	<link rel="stylesheet" href="<?php bloginfo('template_url');?>/bootstrap/css/bootstrap.css">
-	<script src="<?php bloginfo('template_url');?>/bootstrap/js/bootstrap.js"></script> 						
+	<script src="<?php bloginfo('template_url');?>/bootstrap/js/bootstrap.js"></script>					
 	<?php wp_head(); ?>
 </head>
 <body>
