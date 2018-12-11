@@ -16,9 +16,15 @@
 	<!--BOOTSTRAP-->
 	<link rel="stylesheet" href="<?php bloginfo('template_url');?>/bootstrap/css/bootstrap.css">
 	<script src="<?php bloginfo('template_url');?>/bootstrap/js/bootstrap.js"></script>					
-	<?php wp_head(); ?>
+	<?php wp_head(); 
+	///////////////////AJOUT PERSONNALISATION LOGIN ET REGISTER FORM//////////////////////
+	get_template_part("/modules/login_modal/template");
+	global $lienLoginOut;
+	global $lienLoginOutInscription;
+	?>
+	
 </head>
-<body>
+<body> 
 		<?php if(is_front_page()){?>
 			<div class="bckgrd"></div>	
 			<div class="container">
@@ -56,7 +62,7 @@
 				<li><a class="sep_droite" href="">CONSEILS PRATIQUES</a></li>
 				<li><a href="">AGIR</a></li>
 				<?php if(!is_user_logged_in()){ ?>
-					<li><a class="sep_droite" href="<?php bloginfo('url'); ?>/wp-login.php?action=register">S'inscrire</a></li>
+					<li class="sep_droite"><?php echo $lienLoginOutInscription ?></li>
 				<?php } ?>
 				<?php if(is_user_logged_in()){ ?>
 					<?php if($current_user->user_level!=10){ ?>
@@ -70,7 +76,7 @@
 						<li><a target="_BLANK" href="<?php bloginfo('url'); ?>/wp-admin">BackOffice</a></li>
 					<?php } ?>
 				<?php } ?>
-				<li><?php wp_loginout(); ?></li>
+				<li><?php echo $lienLoginOut ?></li>
 			</ul>			
 		</div>
 
@@ -82,7 +88,14 @@
 		chemin=lien.substring(0,lien.length-1);
 
 		//alert(chemin);
-		$('li a[href="'+chemin+'"]').addClass("active");
+		$('.navbar li a[href="'+chemin+'"]').addClass("active");
 
 	});
+	<?php
+	if (is_front_page()) { ?>
+		$(".navbar li a").css({
+			"color":"white",
+			"font-size":"16px",
+		});
+	<?php } ?>
 </script>

@@ -84,4 +84,27 @@ function get_the_excerpt_max_charlength($charlength,$excerpt) {
         return $excerpt;
     }
 }
+
+/////RENVOIE LA MLISTE DES IMAGES ATTACHEES A UN POST////
+//ex : liste_images_attachees(get_the_id(),'thumbnail') 
+// -> renvoie les images attachées  du post en cours (dans la boucle)
+function liste_images_attachees($id_post,$size){
+
+        $attachments=get_children(
+            array(
+                'post_parent'=>$id_post,
+                'post_type'=>'attachment',
+                'post_mime_type'=>'image'
+            )
+        );
+
+        $listeImages="";
+        foreach ($attachments as $attachment) {
+            $listeImages.=wp_get_attachment_link( $attachment->ID,$size);
+        }
+
+        return $listeImages;
+
+
+}
 ?>
