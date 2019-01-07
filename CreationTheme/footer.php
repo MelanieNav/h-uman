@@ -7,11 +7,9 @@
 			<li><a href="<?php bloginfo('url'); ?>/sitemap_index.xml">Plan du site</a></li>
 			<li><a href="<?php bloginfo('url'); ?>/contact">Contact</a></li>
 			<li><a href="<?php bloginfo('url'); ?>/newsletter">Newsletter</a></li>
-			<li><a href="">Faire un don</a></li>
-			<li><a href="">Qui sommes-nous?</a></li>
-			<li><a href=""><img width="18px" src="<?php bloginfo('template_url');?>/images/facebook.png"></a></li>
-			<li><a href=""><img width="18px" src="<?php bloginfo('template_url');?>/images/instagram.png"></a></li>
-			<li><a href=""><img width="22px" src="<?php bloginfo('template_url');?>/images/twitter.png"></a></li>
+			<li><a href="https://www.facebook.com/6humans/"><img class="imgrs" width="18px" src="<?php bloginfo('template_url');?>/images/facebook.png"></a></li>
+			<li><a href="https://www.instagram.com/asso.human/"><img class="imgrs" width="18px" src="<?php bloginfo('template_url');?>/images/instagram.png"></a></li>
+			<li><a href="https://twitter.com/humanteam_"><img class="imgtwi" width="22px" src="<?php bloginfo('template_url');?>/images/twitter.png"></a></li>
 		</ul>
 	</div>
 </footer>

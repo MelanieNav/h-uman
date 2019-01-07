@@ -3,7 +3,7 @@ get_header();
 the_post();
 ?>
 <div class="h-newsletter">
-	<h3><?php the_title(); ?></h3>
+	<h2><?php the_title(); ?></h2>
 	<br>
 	<div class="row">
 		<?php the_content(); ?>

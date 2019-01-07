@@ -1,13 +1,25 @@
-<?php get_header(); ?>	
-<div class="dropdown">
-	<select class="btn btn-default dropdown-toggle btn-lg" id="listeTypeMission" name="typeMission">
-		<option disabled="disabled" selected="selected">
-			Type de mission
-		</option>
-		<?php 
-		liste_type($tab, $nbLignes);
-		?>
-	</select>
+<?php 
+$args=array(
+	 'post_type'=>'mission'
+);
+
+$missions=new WP_query($args);
+$taxonomie=get_select_terms_taxo_post($missions,'rubrique','form-control');
+$action=$_POST["rechercher"];
+if ($action=="rechercher") {
+	//custom_search_filter($query);
+}
+
+
+get_header(); 
+?>	
+<div class="slogan">
+	<p>Au cœur de l'engagement</p>
+</div>
+<div class="dropdown">	
+	<?php 
+		echo $taxonomie
+	?>
 	<select class="btn btn-default dropdown-toggle btn-lg" id="listeDestination" name="destination">
 		<option selected="selected">
 			Destination
@@ -16,24 +28,23 @@
 		liste_type($tab, $nbLignes);
 		?>
 	</select>
-	<button id="rechercher" class="btn btn-info btn-lg">
+	<button id="rechercher" type="submit" name="rechercher" value="rechercher" class="btn btn-info btn-lg submit">
 		Rechercher
 	</button>	
 </div>	
+<?php echo do_shortcode( '[searchandfilter fields="rubrique" submit_label="Rechercher" hide_empty=1 all_items_labels="Type de mission"]' ); ?>
 <div id="boutonAccueil">
 </div>
 <div id="content"> 
 	<?php if(have_posts()) : ?>
 		<?php while(have_posts()) : the_post(); ?> 
 			<div class="post" id="post-<?php the_ID(); ?>">
-				<h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2> 
-				<p class="postmetadata">   
-					<?php comments_popup_link('Pas de commentaires', '1 Commentaire', '% Commentaires'); ?> <?php edit_post_link('Editer', ' &#124; ', ''); ?>   
-				</p>
+				<h1><?php the_title(); ?></h1> <br>
 				<div class="post_content"> 
 					<?php the_content(); ?> 
 				</div> 
 			</div> 
+			<br>
 		<?php endwhile; ?> 
 	<?php endif; ?>
 </div>

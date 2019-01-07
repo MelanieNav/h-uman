@@ -26,6 +26,7 @@
 				<input type="password" name="pwd" id="user_pass" class="input" value="" size="20"></label>
 			</p>
 				<p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever"> Se souvenir de moi</label></p>
+				<p>Si vous êtes un porteur de projet, veuillez envoyer un mail dans l\'onglet "contact".</p>
 			<p class="submit">
 				<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large  btn btn-primary btn-large" value="Se connecter">
 				<input type="hidden" name="redirect_to" value="'.get_bloginfo("url").'/wp-admin/">
