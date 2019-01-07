@@ -69,7 +69,6 @@ h3{
 }
 
 #triangle {
-	display: none;
 	height: 0;
 	width: 0;
 	border-top: 600px solid #1DBF69;
@@ -324,10 +323,6 @@ select[name="rubrique"]{
 	margin-right: 5%;
 }
 
-#listeTypeMission{
-	margin-right: 5%;
-}
-
 .type{
 	color: black;
 	text-align: center;
@@ -350,92 +345,28 @@ select[name="rubrique"]{
 }
 
 .lienTem{
-	text-decoration: none; 
+	text-decoration: none;
+	margin-left: 13%; 
 	color:black;
-}
-
-.h-temoignages h2{
-	font-family: 'Australia', sans-serif !important;
-	color: #3aaefc !important;
-	text-transform: uppercase;
-	text-align: center;
-}
-
-.h-titre{
-	text-align: center;
-	text-transform: uppercase;
-	margin-top: 5px;
-	margin-bottom: 5px;
-}
-
-.tem.col-md-3.col-md-offset-1{
-	margin-left: 15px;
-	margin-right: 15px;
-	margin-bottom: 15px;
-}
-
-.h-temoignages>.row{
-	display: flex;
-	justify-content: center;
-	margin-top: 15px;
-}
-
-
-/*******AGIR**************/
-
-.h-agir h2{
-	font-family: 'Australia', sans-serif !important;
-	color: #3aaefc !important;
-	text-transform: uppercase;
-	text-align: center;
 }
 
 /*******REDIGER TEMOIGNAGE**************/
 .h-redigerTem{
 	padding:10px 15px;
-	width: 100%;
+	width: 76%;
+	margin-left: 70px;
 }
 
 .h-redigerTem>.row{
-	margin-left: 10%;
-	margin-right: 10%;
-}
-
-.h-redigerTem h2{
-	font-family: 'Australia', sans-serif !important;
-	color: #3aaefc !important;
-	text-transform: uppercase;
-	text-align: center;
-}
-
-/*******conseils**************/
-
-.h-conseils h2{
-	font-family: 'Australia', sans-serif !important;
-	color: #3aaefc !important;
-	text-transform: uppercase;
-	text-align: center;
-}
-
-.h-conseils p{
-	margin-right: 10%;
-	margin-left: 10%;
+	margin-left: 20px;
 }
 
 
 /*******CONTACT**************/
 .h-contact{
-	background-color: #F4F4F4;
 	padding:10px 35px;
 	width: 70%;
 	margin-left: 150px;
-}
-
-.h-contact h2{
-	font-family: 'Australia', sans-serif !important;
-	color: #3aaefc !important;
-	text-transform: uppercase;
-	text-align: center;
 }
 
 /******mo-login-modal**********/
@@ -563,10 +494,6 @@ select[name="rubrique"]{
 	text-align: center;
 	padding:10px;
 }
-
-
-
-
 
 /*******Petits écrans***********/
 @media screen and (min-width: 100px) and (max-width: 750px) {
@@ -719,13 +646,8 @@ li>a{
 .bckgrd{
 	width: 100%;
 	height: 500px;
+	background-image: none;
 }
-
-.slogan{
-	font-size: 35px;
-	margin-top: 240px;
-}
-
 
 .dropdown{
 	display: flex;
@@ -741,47 +663,6 @@ li>a{
 	margin-bottom: 15px;
 	opacity: 0.85;
 }
-
-.dropdown>select{
-	font-size: 15px;
-	width: 80%;
-	margin: 0 auto;
-	text-align: center;
-}
-
-#listeDestination{
-	margin: 0 auto;
-}
-
-
-td{
-	display: flex;
-	flex-direction: column;
-}
-
-
-/**********Temoiganges**************/
-
-.h-temoignages{
-	margin-left: 5%;
-	margin-right: 5%;
-}
-
-.h-temoignages>.row{
-	display: flex;
-	flex-direction: column;
-	margin-top: 15px;
-}
-
-.tem.col-md-3.col-md-offset-1{
-	margin-top: 10px;
-}
-
-.lienTem{
-	margin-left: 0;
-}
-
-
 
 .comments-template{
 	display: block;
@@ -1009,15 +890,16 @@ a>img {
 	padding-right: 0;
 }
 
-
-/***************BOUTON******************/
+.bckgrd{
+	background-image: none;
+}
 
 .dropdown{
 	display: flex;
 	flex-direction: column;
 	text-align: center;
-	width: 60%;
-	margin: 0 auto;
+	margin-top: 40px;
+	margin-bottom: 15px;
 }
 
 .dropdown>button{
@@ -1025,16 +907,7 @@ a>img {
 	margin-right: 10%;
 	margin-bottom: 15px;
 	opacity: 0.85;
-	font-size: 15px;
 }
-
-.dropdown>select{
-	font-size: 15px;
-	width: 100%;
-	text-align: center;
-}
-
-
 
 .comments-template{
 	display: block;
@@ -1100,93 +973,13 @@ a>img {
 	padding : 0;
 }
 
-/**********Temoiganges**************/
-
-.h-temoignages>.row{
-	display: flex;
-	flex-direction: column;
-	margin-top: 15px;
-}
-
 .lienTem{
 	margin-left: 0%;
 }
-
-
 
 .post{
 	display: block;
 	text-align: left;
 }
-
-.slogan p{
-	font-size: 40px;
-	margin-top: 380px;
-}
-
-/**************CONTENT***************/
-
-#content figure{
-	text-align: center;
-}
-
-#content h1{
-	text-align: center;
-}
-
-
-}
-
-
-/*******écrans moyens desktop***********/
-@media screen and (min-width: 971px) and (max-width: 1200px) {
-
-#content{
-	margin-top: 40px;
-}
-
-.navbar{
-	font-size: 11px;
-}
-
-.slogan p{
-	font-size: 40px;
-	margin-top: 430px;
-}
-
-.logo{
-	margin-right: 40px;
-	width: 100px;
-}
-
-.sidebar{
-	margin-top: 50px;
-}
-
-.sidebar h2{
-	text-align: center;
-	margin-top: 10px;
-}
-
-#boutonAccueil{
-	display: none;
-}
-
-.dropdown{
-	margin-bottom: 20px;
-}
-
-.h-temoignages>.row{
-	display: flex;
-	justify-content: center;
-	margin-top: 15px;
-}
-
-.lienTem{
-	margin-left: 0;
-}
-
-
-
 
 }

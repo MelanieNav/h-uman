@@ -9,7 +9,7 @@ get_header();
 
 ?>
 <div class="h-temoignages">
-	<h2><?php the_title(); ?></h2>
+	<h3><?php the_title(); ?></h3>
 	<br>
 	<div class="row">
 		<a class="lienTem" href="<?php bloginfo('url'); ?>/redigerTem">Écrire un témoignage...</a><br><br>

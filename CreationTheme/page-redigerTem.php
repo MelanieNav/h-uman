@@ -53,7 +53,7 @@ get_header();
 	<p>Vous devez être connecté pour pouvoir écrire un témoignage</p>
 <?php } else { ?>
 <div class="h-redigerTem">
-	<h2>Votre témoignage :</h2><br>
+	<h3>Votre témoignage :</h3><br>
 	<div class="row">
 		<div class="col-md-9">
 			<form class="formRedigerTemoignage" action="" method="post" enctype="multipart/form-data">
